@@ -24,6 +24,13 @@ def send_http_get_request(url):
 
 
 def get_beeceptor_data():
+
+    """Sends a GET request to https://echo.free.beeceptor.com.
+
+    Returns:
+        tuple: (Postman-Token, IP address) extracted from the response headers.
+    """
+    
     url = "https://echo.free.beeceptor.com"
     response = requests.get(url)
     headers = response.headers
