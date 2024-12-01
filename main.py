@@ -37,6 +37,12 @@ def get_beeceptor_data():
     return headers.get("Postman-Token"), headers.get("X-Forwarded-For") #X-Forwarded-For is an HTTP header that identifies the IP address of a client that initiates an HTTP request
 
 def send_post_to_beeceptor():
+
+    """Sends a POST request to https://echo.free.beeceptor.com with a JSON payload.
+
+    Returns:
+       Response: The HTTP response object.
+    """
     url = "https://echo.free.beeceptor.com"
     payload = {"hello": "world"}
     response = requests.post(url, json=payload)
