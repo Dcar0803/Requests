@@ -13,3 +13,7 @@ def test_get_beeceptor():
     response = get_beeceptor_data()
     assert isinstance(response, tuple)  # Need to return a tuple.
     assert len(response) == 2  # the tuple contains two elements.
+
+def test_post_beeceptor():
+    response = send_post_to_beeceptor()
+    assert response.status_code == 200  # Ensure the POST request is successful.
