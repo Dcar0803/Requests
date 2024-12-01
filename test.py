@@ -1,5 +1,6 @@
 import requests
 import pytest
+from main import send_http_get_request
 
 def test_http_get():
     url = "https://httpbin.org/get"
