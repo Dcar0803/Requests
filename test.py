@@ -1,6 +1,6 @@
 import requests
 import pytest
-from main import send_http_get_request, get_beeceptor_data
+from main import send_http_get_request, get_beeceptor_data, send_post_to_beeceptor
 
 def test_http_get():
     url = "https://httpbin.org/get"
