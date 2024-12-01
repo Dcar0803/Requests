@@ -21,3 +21,10 @@ def send_http_get_request(url):
     if "application/json" in response.headers.get("Content-Type", ""):
         return response.status_code, response.json()
     return response.status_code, response.text
+
+
+def get_beeceptor_data():
+    url = "https://echo.free.beeceptor.com"
+    response = requests.get(url)
+    headers = response.headers
+    return headers.get("Postman-Token"), headers.get("X-Forwarded-For") #X-Forwarded-For is an HTTP header that identifies the IP address of a client that initiates an HTTP request
